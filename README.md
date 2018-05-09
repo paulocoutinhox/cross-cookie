@@ -1,13 +1,36 @@
 # Cross cookie test
 
-This is a sample trying to use cross-cookie between different domain.  
+This is a sample trying to use cookie across between different domains.  
+
+The scenario is simple:  
+
+```
+-------------------------------------------|
+|      LOCALHOST      | CROSS-DOMAIN.LOCAL | 
+-------------------------------------------|
+| Make ajax request -> Create cookie with  |
+|                      another domain and  |
+|                      put some data on    |
+|                      session data        |
+-------------------------------------------|
+|                   <- Back with cookie    |
+|                      on header           |
+-------------------------------------------|
+| Make other ajax   -> Initialize session  |
+| request                                  |
+-------------------------------------------|
+|                   <- Show variables in   |
+|                      session data defined|
+|                      on first request    |
+-------------------------------------------|
+```
 
 ## How to use
 
 1. Install docker  
 
 2. Add this line to your /etc/hosts file:  
-> 127.0.0.1 cross-cookie-backend.local
+> 127.0.0.1 cross-domain.local
 
 3. Build docker images:
 > make docker-compose-rebuild
