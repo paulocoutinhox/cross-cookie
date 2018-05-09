@@ -1,5 +1,9 @@
-var baseUrl = 'http://api.crosscookie.prsolucoes.com';
+var baseUrl = 'http://cross-domain.local';
 var mySessionId = '';
+
+if (document.location.hostname == 'crosscookie.prsolucoes.com') {
+    baseUrl = 'http://api.crosscookie.prsolucoes.com';
+}
 
 function httpPost(url, data, onSuccess) {
     $.ajax({
