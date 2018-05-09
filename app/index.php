@@ -30,7 +30,12 @@
       <br />
       <br />
 
-      <button class="button is-rounded is-primary" onclick="sendPostToIframe()">Post to Iframe</button>
+      <button class="button is-rounded is-primary" onclick="sendPostToNewIframe()">Post to new Iframe</button>
+
+      <br />
+      <br />
+
+      <button class="button is-rounded is-primary" onclick="sendPostToLocalIframe()">Post to local Iframe</button>
 
       <br />
       <br />

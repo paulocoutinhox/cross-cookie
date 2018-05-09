@@ -50,11 +50,25 @@ function sendAjax2() {
     httpPost(baseUrl + '/ajax2.php');
 }
 
-function sendPostToIframe() {
+function sendPostToLocalIframe() {
     var form = $('#iframe_form');
     form.attr('action', baseUrl + '/ajax2.php');
     form.submit();
     console.log('Iframe form submited');
+}
+
+function sendPostToNewIframe() {
+    var iframe = $('#iframe_new');
+
+    if (iframe) {
+        iframe.remove();
+    }
+
+    $('<iframe />', { id: 'iframe_new', src: baseUrl + '/ajax1.php' }).appendTo('body');
+    iframe = $('#iframe_new').get(0);
+
+    iframe.postMessage({ username: 'user1' }, baseUrl + '/ajax2.php');
+    console.log('Iframe created and message was sent');
 }
 
 function sendGetSessionId() {
