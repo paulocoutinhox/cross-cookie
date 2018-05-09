@@ -75,5 +75,5 @@ function setNewSessionId(newId) {
 }
 
 function showResult(data) {
-    $('#input_result').val(data);
+    $('#input_result').text(data);
 }
