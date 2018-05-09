@@ -94,3 +94,14 @@ function setNewSessionId(newId) {
 function showResult(data) {
     $('#input_result').text(data);
 }
+
+$(window).on('message', function (event) {
+    // We must check event.origin, because anyone can
+    // trigger event. Unless, you are public data provider.
+    if (event.origin !== baseUrl) {
+        showResult('Window event message has invalid origin');
+        return;
+    }
+
+    showResult("Event:\n\n" + 'Window event message has invalid origin');
+});
