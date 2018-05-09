@@ -8,6 +8,12 @@ if (document.location.hostname == 'crosscookie.prsolucoes.com') {
 function httpPost(url, data, onSuccess) {
     showResult('Loading...');
 
+    var headers = {'Content-Type': 'application/json'};
+
+    if (mySessionId != '') {
+        headers['My-Session-Id'] = mySessionId;
+    }
+
     $.ajax({
         url: url,
         type: 'POST',
@@ -15,10 +21,7 @@ function httpPost(url, data, onSuccess) {
         xhrFields: { withCredentials: true },
         dataType: 'json',
         credentials: 'include',
-        headers: {
-            'My-Session-Id': mySessionId,
-            'Content-Type': 'application/json'
-        },
+        headers: headers,
         success: function (data) {            
             console.log('+ Request Success:');
             console.log(data);
