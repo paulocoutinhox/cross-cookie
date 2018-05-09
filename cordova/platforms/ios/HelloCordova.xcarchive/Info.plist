@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/HelloCordova.app</string>
+		<key>CFBundleIdentifier</key>
+		<string>com.prsolucoes.crosscookie</string>
+		<key>CFBundleShortVersionString</key>
+		<string>1.0.0</string>
+		<key>CFBundleVersion</key>
+		<string>1.0.0</string>
+		<key>SigningIdentity</key>
+		<string>iPhone Developer: Paulo Coutinho (Z65H7K3Q57)</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2018-05-09T15:59:24Z</date>
+	<key>Name</key>
+	<string>HelloCordova</string>
+	<key>SchemeName</key>
+	<string>HelloCordova</string>
+</dict>
+</plist>
