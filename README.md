@@ -46,12 +46,10 @@ The scenario is simple:
 If you want more commands, type:  
 > make help  
 
-## Problems found
+## Solutions
 
-Apple **removed** this option from Safari (osx and ios), but works on other browsers.  
+First solution dont need any change on server code, but only in nginx configuration to support CORS and the helper function to make requests with all required params.  
 
-The found solution was pass the **PHP session ID** in a header and start a session with this **session ID** from **header**.  
+Second solution is using the same PHP Session ID from the start script that initialize the session and  use the returned session ID inside a header on other requests. All requisions after the first ajax call (can be a login script), will receive a header with that PHP Session ID to force always start the session with that ID.  
 
-Solution is in file: **ajax3.php**  
-
-You can use other auth options by header, like JWT too or a own method.  
+Both are working and tested on Chrome and Safari (OSX and iOS).  
