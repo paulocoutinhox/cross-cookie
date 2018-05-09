@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cross Cookie Test</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <script src="main.js"></script>
@@ -61,6 +62,11 @@
           </a>
         </div>
       </div>
+
+      <br />
+      <br />
+
+      <textarea class="input" id="input_result" style="width: 100%; height: 300px; margin: 0 auto; border:1px solid #CCC;">Result will be here</textarea>
 
       <br />
       <br />

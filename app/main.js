@@ -6,6 +6,8 @@ if (document.location.hostname == 'crosscookie.prsolucoes.com') {
 }
 
 function httpPost(url, data, onSuccess) {
+    showResult('Loading...');
+
     $.ajax({
         url: url,
         type: 'POST',
@@ -17,17 +19,20 @@ function httpPost(url, data, onSuccess) {
             'My-Session-Id': mySessionId,
             'Content-Type': 'application/json'
         },
-        success: function (data) {
+        success: function (data) {            
             console.log('+ Request Success:');
             console.log(data);
 
-            if (onSuccess) {
+            showResult("Request Success: \n" + JSON.stringify(data));
+
+            if (onSuccess) {                
                 onSuccess(data);
             }
         },
         error: function (ex) {
             console.log('+ Request Error:');
             console.log(ex);
+            showResult('Request Error');
         }
     });
 }
@@ -67,4 +72,8 @@ function applySessionId() {
 function setNewSessionId(newId) {
     $('#session_id').val(newId);
     mySessionId = newId;
+}
+
+function showResult(data) {
+    $('#input_result').val(data);
 }
