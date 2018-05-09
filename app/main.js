@@ -1,4 +1,4 @@
-var baseUrl = 'http://cross-domain.local';
+var baseUrl = 'http://api.crosscookie.prsolucoes.com';
 var mySessionId = '';
 
 function httpPost(url, data, onSuccess) {
