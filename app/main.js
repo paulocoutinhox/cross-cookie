@@ -8,7 +8,7 @@ if (document.location.hostname == 'crosscookie.prsolucoes.com') {
 function httpPost(url, data, onSuccess) {
     showResult('Loading...');
 
-    var headers = {'Content-Type': 'application/json'};
+    var headers = {};
 
     if (mySessionId != '') {
         headers['My-Session-Id'] = mySessionId;
@@ -22,13 +22,13 @@ function httpPost(url, data, onSuccess) {
         dataType: 'json',
         credentials: 'include',
         headers: headers,
-        success: function (data) {            
+        success: function (data) {
             console.log('+ Request Success:');
             console.log(data);
 
             showResult("Request Success: \n" + JSON.stringify(data));
 
-            if (onSuccess) {                
+            if (onSuccess) {
                 onSuccess(data);
             }
         },
