@@ -9,7 +9,7 @@
   <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js?rnd=2018-05-09-15-04-00"></script>
 </head>
 
 <body>
